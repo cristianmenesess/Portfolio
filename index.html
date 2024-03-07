@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/CSS/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./src/imagens/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./src/imagens/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./src/imagens/favicon-16x16.png">
+<link rel="manifest" href="./src/imagens/site.webmanifest">
+
+
+  <title>Portfólio Cristian</title>
+</head>
+
+<body>
+  <header>
+    <nav data-menu="suave">
+      <div class="nav-left">
+        <a href="#home">
+          <img src="./src/imagens/logo.png" alt="logo_inicial" width="50">
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul data-menu="list" id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contatos">Contatos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+  <main>
+    <section class="principal" id="home">
+      <div class="principal__container">
+        <div class="principal__left">
+          <h1>&lt;Cristian/&gt;</h1>
+           <span class="principal__sentence"></span>
+          <span class="principal__input-cursor"></span>
+          <h2>Desenvolvedor Front-End</h2>
+
+          <div class="principal__botao">
+            <a href="https://drive.google.com/file/d/15SIQ_VHZeX4pm3djKYUCPoBotYny821y/view?usp=sharing"
+              target="_blank">
+              <div class="principal__botao-cv">
+                <img src="./src/imagens/icon-download.png" alt="icone-download" width="50" />
+                <p>Currículo</p>
+              </div>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5534999964913&text=Olá,%20gostaria%20de%20entrar%20em%20contato%20com%20você!"
+              target="_blank">
+              <div class="principal__botao-ig">
+                <img src="./src/imagens/icon-wpp.png" alt="icone-whats" width="30" />
+                <p>Contato</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <img class="img_memogi" src="./src/imagens/memogi.png" alt="memogi">
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projetos">
+      <h3 class="projects-title">Meus Projetos</h3>
+
+      <!-- Card Container -->
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card" id="card1">
+          <a href="https://cristianmenesess.github.io/projeto-calculadora/" target="_blank">
+          <img src="./src/imagens/calculadora.jpg" alt="Project 1">
+        </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" id="card2">
+          <a href="https://ativocred.netlify.app/" target="_blank"> 
+          <img src="./src/imagens/ativo-cred.jpg" alt="Project 2">
+        </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" id="card3">
+          <a href="https://atendimentoexclusivorosanasilva.netlify.app/" target="_blank"> 
+          <img src="./src/imagens/site-redirect.jpg" alt="Project 3">
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" id="card4">
+          <a href="https://cristianmenesess.github.io/CarrinhoDeCompras/" target="_blank"> 
+          <img src="./src/imagens/projetoECCO.jpg" alt="Project 4">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer>
+      <div class="container" id="contatos">
+        <div class="row">
+          <div class="col-md-4 text-center">
+           
+            <p>Contato via Linkedin:</p>
+            <a href="https://www.linkedin.com/in/cristian-oliveira07/" target="_blank"><i class="fab fa-whatsapp"></i> Linkedin </a>
+          </div>
+          <div class="col-md-4 text-center">
+            
+            <p>GitHub para análise:</p>
+            <a href="https://github.com/cristian-C0DEX" target="_blank"><i class="fab fa-instagram"></i> Github</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./src/script.js"></script>
+  </main>
+  <div class="mobile-nav">
+    <span class="menu-icon">&#9776; Menu</span>
+    <ul class="mobile-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contatos">Contatos</a></li>
+    </ul>
+  </div>
+  <script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.querySelector(".menu-icon");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  menuIcon.addEventListener("click", function () {
+    mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+  });
+});
+    </script>
+  
+</body>
+
+</html>

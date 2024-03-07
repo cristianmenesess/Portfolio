@@ -1,0 +1,376 @@
+@import url(./menu-mobile.css);
+
+body {
+  margin: 0;
+  border: 0;
+  overflow-x: hidden;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+}
+
+main {
+  color: #c4c4c4;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+nav {
+  padding: 0 15%;
+  display: flex;
+  align-items: center;
+  background-color: #151515;
+  border-bottom: 2px solid #ffffff;
+  font-weight: bold;
+  height: 58px;
+  transition: 0.3s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+nav.fixed {
+  box-shadow: 0 4px 4px rgba(0,0,0,.3);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px;
+}
+
+nav ul li::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #ffffff;
+  margin-top: 5px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+nav ul li a {
+  color: #cfcfcf; 
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease; 
+}
+
+nav ul li:hover a {
+  color: #ffffff;
+}
+
+nav p {
+  padding: 10px;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+nav p a {
+  color: #00d2df;
+  transition: 0.3s;
+}
+
+nav p a:hover {
+  color: rgba(147, 88, 247, 1);
+}
+
+.principal {
+  padding: 6% 15%;
+  min-height: 35vh;
+  margin-top: 80px; /* Adicione um espaço para o título abaixo da barra de navegação */
+}
+
+.principal__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.principal__left {
+  width: 50%;
+}
+
+.img_memogi {
+  float: right;
+  border-left: -1000px;
+  display: flex;
+  width: 800px; /* Ajuste conforme necessário */
+  height: auto;
+}
+
+.principal h1 {
+  text-transform: uppercase;
+  font-size: 2.9rem; /* Ajuste conforme necessário para o tamanho desejado */
+  color: #2997ff; /* Adição da cor para garantir visibilidade */
+}
+
+.principal__botao {
+  display: flex;
+  gap: 30px; /* Ajuste a distância conforme necessário */
+}
+
+.principal__botao-ig,
+.principal__botao-cv {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  justify-content: space-evenly;
+  width: 140px;
+  border-radius: 980px; /* Ajuste o valor conforme necessário para tornar os botões mais arredondados */
+  position: relative;
+  background-color: #ffffff;
+  margin-top: 1rem;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  height: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #2997ff;
+  font-weight: 800;
+
+}
+
+.principal__botao-ig::before,
+.principal__botao-cv::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2px;
+  border-radius: 9px;
+  background-size: 400%;
+  animation: move infinite forwards 4s;
+} 
+
+
+
+.principal__botao-ig:hover,
+.principal__botao-cv:hover {
+  background-color: #767882ef;
+}
+
+.principal__botao-cv p,
+.principal__botao-cv img {
+  padding: 9px 0 5px;
+}
+
+.principal__botao-cv img {
+  margin-right: 2px;
+}
+
+.main-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  color: #555;
+}
+
+.projects {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.777); /* Alteração do background color */
+}
+
+.projects-title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card {
+  margin: 0 10px;
+  width: 500px;
+  height: 300px;
+  background: rgb(236, 6, 6); /* Alteração do background color */
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0.5;
+}
+
+.card:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 55px;
+  padding: 40px 0;
+  font-weight: 800;
+}
+
+footer a {
+  color: #2997ff; 
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease; 
+}
+
+footer a:hover {
+  color: #0242ca; 
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col-md-4 {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px; /* Adicionando um padding para o conteúdo dentro da coluna */
+  box-sizing: border-box; /* Garante que o padding não afete as dimensões da coluna */
+  text-align: center; /* Centraliza o conteúdo na coluna */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffffb3;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  nav ul li {
+    list-style: none;
+    margin: 10px;
+  }
+
+  nav ul li::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #ffffff;
+    margin-top: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  nav ul li:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img_memogi {
+    display: block;
+    width: 150%;
+    margin: 10 auto; /* Mantém a margem inferior para separação dos botões */
+    position: center;
+    top: -22px; /* Ajuste conforme necessário para posicionar acima dos botões */
+    z-index: 1; /* Garante que o memogi fique acima dos botões */
+  }
+
+  .principal__container {
+    flex-direction: column; /* Mudar a direção do conteúdo para coluna */
+    text-align: center; /* Centralizar o texto na tela */
+  }
+
+  .principal__left {
+    width: 100%; /* Ocupar a largura total da tela */
+  }
+
+  .principal h1 {
+    font-size: 2rem; /* Reduzir o tamanho da fonte para telas menores */
+  }
+
+  .principal__botao {
+    flex-direction: column; /* Mudar a direção dos botões para coluna */
+    gap: 15px; /* Ajuste a distância conforme necessário */
+  }
+
+  .principal__botao-ig,
+  .principal__botao-cv {
+    width: 100%; /* Ocupar a largura total da tela */
+  }
+}
+
+.card-container {
+  flex-direction: column; /* Mudar a direção dos projetos para coluna */
+  align-items: center; /* Centralizar os projetos */
+}
+
+.card {
+  width: 100%; /* Ocupar a largura total da tela */
+  margin-bottom: 20px; /* Adicionar margem entre os projetos */
+}
+@media screen and (min-width: 769px) {
+  .card-container {
+    flex-direction: row; /* Manter a exibição dos projetos em linha em telas maiores */
+    justify-content: center; /* Centralizar os projetos */
+  }
+
+  .card {
+    width: 500px; /* Restaurar a largura original dos projetos */
+    margin-bottom: 0; /* Remover a margem entre os projetos */
+  }
+}

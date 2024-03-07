@@ -1,0 +1,40 @@
+.mobile-nav {
+    display: none; /* Esconder por padrão em telas maiores */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mobile-nav {
+      display: block; /* Mostrar em telas menores que 768px */
+      text-align: center;
+      background-color: #151515;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 101; /* Garantir que a barra de navegação fique acima da barra principal */
+    }
+  
+    .menu-icon {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.5em;
+    }
+  
+    .mobile-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+  
+    .mobile-menu li {
+      margin: 10px;
+    }
+  
+    .mobile-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2em;
+    }
+  }
+  
