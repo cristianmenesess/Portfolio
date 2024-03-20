@@ -200,6 +200,27 @@ a {
   color: #555;
 }
 
+.principal .scroll {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.principal .scroll p {
+  margin: 0; /* Remover margens padrão */
+}
+
+.principal .scroll img {
+  display: block; /* Garante que a imagem seja exibida como bloco */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  animation: scroll-down 3s infinite forwards;
+}
+
+
 .projects {
   text-align: center;
   padding: 20px 0;
